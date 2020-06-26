@@ -17,6 +17,7 @@
  * Define Global Variables
  *
  */
+const navItems = document.getElementsByTagName("section");
 
 /**
  * End Global Variables
