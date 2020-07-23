@@ -10,15 +10,11 @@
 
 /* ---- Base Rules ---- */
 body {
-  background: rgb(136, 203, 171);
-  background: linear-gradient(
-    0deg,
-    rgba(136, 203, 171, 1) 0%,
-    rgba(0, 13, 60, 1) 100%
-  );
+  /* background: rgb(136, 203, 171); */
+  background: linear-gradient(0deg, #df7599, #7189bf);
   margin: 0;
   font-family: "Merriweather", serif;
-  color: #fff;
+  color: #27375b;
 }
 
 /* Typeography General*/
@@ -36,15 +32,13 @@ h1 {
 }
 
 h2 {
-  border-bottom: 1px solid #cc1;
+  border-bottom: 1px solid #27375b;
   font-family: "Oxygen", Sans-Serif;
   font-size: 3em;
-  color: #fff;
 }
 
 p {
   line-height: 1.6em;
-  color: #eee;
 }
 
 /* ---- Layout Rules ---- */
@@ -65,6 +59,7 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+
 .navbar__menu ul {
   padding-left: 0;
   margin: 0;
@@ -80,18 +75,21 @@ section {
   padding: 1em;
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: #27375b;
 }
 
 .navbar__menu .menu__link:hover {
-  background: #333;
-  color: #fff;
+  color: #72d6c9;
   transition: ease 0.3s all;
+}
+
+.navbar__menu .active-link {
+  color: #a9eec2;
 }
 
 /* Header Styles */
 .page__header {
-  background: #fff;
+  background: #7189bf;
   position: fixed;
   top: 0;
   width: 100%;
@@ -100,13 +98,7 @@ section {
 
 /* Footer Styles */
 .page__footer {
-  background: #000;
-  padding: 3em;
-  color: #fff;
-}
-
-.page__footer p {
-  color: #fff;
+  padding: 2em;
 }
 
 /* ---- Theme Rules ---- */
@@ -205,12 +197,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: #ffffff56;
 }
 
 section.your-active-class .landing__container::before {
@@ -231,4 +218,28 @@ section.your-active-class .landing__container::after {
   to {
     transform: rotate(360deg) translate(-1em) rotate(-360deg);
   }
+}
+
+/* Scroll to Top Button */
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #df7599;
+  color: #ffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+#topButton:hover {
+  background-color: #7189bf;
+  color: #ffff;
+  border: none;
+  box-shadow: none;
 }
