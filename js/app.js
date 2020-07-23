@@ -13,28 +13,17 @@
  *
  */
 
-/**
- * Define Global Variables
- *
- */
+//
+// --> Define Global Variables
+//
 const navItems = Array.from(document.getElementsByTagName("section"));
 const navUl = document.querySelector("#navbar__list");
-/**
- * End Global Variables
- * Start Helper Functions
- *
- */
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
+//
+// --> Build the Nav
+//
 
-// build the nav
 for (navItem of navItems) {
-  console.log(navItem);
-
   let li = document.createElement("li");
   let a = document.createElement("a");
 
@@ -45,58 +34,6 @@ for (navItem of navItems) {
   li.appendChild(a);
   navUl.appendChild(li);
 }
-
-// // Add class 'active' to section when near top of viewport
-// window.addEventListener("scroll", testFunction);
-
-// function testFunction() {
-//   const allSections = document.querySelectorAll("section");
-//   for (i = 0; i < allSections.length; i++) {
-//     if (!isInViewport(allSections[i])) {
-//       allSections[i].classList.remove("active");
-//     } else {
-//       allSections[i].classList.add("active");
-//     }
-//   }
-// }
-
-// function isInViewport(elem) {
-//   // function to define the sections' position in viewport
-//   let bounding = elem.getBoundingClientRect();
-//   return (
-//     bounding.top + 300 >= 0 &&
-//     bounding.left >= 0 &&
-//     bounding.bottom <=
-//       (window.innerHeight || document.documentElement.clientHeight) + 300 &&
-//     bounding.right <=
-//       (window.innerWidth || document.documentElement.clientWidth)
-//   );
-// }
-
-// // Scroll to anchor ID using scrollTO event
-// document.querySelectorAll("a").forEach((a) => {
-//   a.addEventListener("click", function (event) {
-//     event.preventDefault();
-
-//     document.getElementById(a.getAttribute("href")).scrollIntoView({
-//       behavior: "smooth",
-//     });
-//   });
-// });
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
-
-// ----------------------
-// ----------------------
 
 //
 // --> Highlight active section in body and in navbar on Scroll
@@ -148,7 +85,10 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (
+    document.body.scrollTop > 470 ||
+    document.documentElement.scrollTop > 470
+  ) {
     topButton.style.display = "block";
   } else {
     topButton.style.display = "none";
