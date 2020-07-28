@@ -35,4 +35,4 @@ To get started, clone project locally and open files in the editor.
 JavaScript
 
 ## Deployments:
-Visit the deployed project [here](https://filippomassarelli.github.io/udacity-landing-page/) 
+Visit the deployed project [here](https://filippomassarelli.github.io/udacity-project-2/) 
